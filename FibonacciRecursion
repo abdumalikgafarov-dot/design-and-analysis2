@@ -1,0 +1,21 @@
+public class FibonacciRecursion {
+
+    // Рекурсивный метод нахождения n числа Фибоначчи
+    public static int fibonacci(int n) {
+        // Базовый случай возвращает n, если n равно 0 или 1
+        if (n <= 1) {
+            return n;
+        }
+        // Рекурсивный случай сумма двух предыдущих чисел
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    public static void main(String[] args) {//+
+        int count = 10; //Количество элементов для вывода
+
+        System.out.println("Fibonacci Series up to " + count + " terms:");//+
+        for (int i = 0; i < count; i++) {//+
+            System.out.print(fibonacci(i) + " ");
+        }
+    }
+}
